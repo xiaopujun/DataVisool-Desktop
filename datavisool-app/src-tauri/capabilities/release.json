@@ -1,0 +1,12 @@
+{
+  "identifier": "release",
+  "description": "发布窗口只能使用本地应用 IPC，不可创建 WebView 或调用 Shell。",
+  "windows": ["release-*"],
+  "permissions": [
+    "core:default",
+    "core:window:allow-close",
+    "core:window:allow-is-fullscreen",
+    "core:window:allow-set-fullscreen",
+    "dialog:allow-message"
+  ]
+}

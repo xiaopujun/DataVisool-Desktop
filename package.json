@@ -1,0 +1,21 @@
+{
+  "name": "datavisool",
+  "private": true,
+  "version": "1.0.0",
+  "description": "DataVisool 桌面可视化设计器",
+  "main": "index.js",
+  "scripts": {
+    "release:datavisool-ui": "node ./datavisool-ui/scripts/publish.mjs",
+    "release:datavisool-sdk": "node ./datavisool-sdk/scripts/publish.mjs",
+    "release:datavisool-interaction-engine": "node ./datavisool-interaction-engine/scripts/publish.mjs",
+    "build:app": "pnpm -F datavisool-app build",
+    "action:app": "pnpm -F datavisool-app action",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:packages": "pnpm -r --filter datavisool-app^... run build",
+    "check:packages": "node scripts/check-package-boundaries.mjs",
+    "test:package-artifacts": "node scripts/verify-package-artifacts.mjs"
+  },
+  "keywords": [],
+  "author": "DAGU",
+  "license": "SEE LICENSE IN LICENSE"
+}

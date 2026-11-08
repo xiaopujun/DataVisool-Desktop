@@ -1,0 +1,21 @@
+[package]
+name = "datavisool-datasource"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+base64 = "0.22"
+chrono = "0.4"
+oracledb = "=26.0.0-beta.4"
+regex = "1"
+rustls = { version = "0.23", default-features = false, features = ["aws_lc_rs", "std", "tls12"] }
+serde_json = { version = "1", features = ["arbitrary_precision"] }
+sqlparser = { version = "=0.63.0", default-features = false, features = ["std", "visitor"] }
+tiberius = { version = "=0.13.0", default-features = false, features = ["rustls", "tds73", "chrono", "rust_decimal"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "time", "sync"] }
+tokio-util = { version = "0.7", features = ["compat"] }
+url = "2"
+urlencoding = "2"
+
+[dev-dependencies]
+rust_decimal = "1"

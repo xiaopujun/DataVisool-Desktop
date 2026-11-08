@@ -1,0 +1,12 @@
+[workspace]
+resolver = "2"
+members = [
+  "datavisool-compat",
+  "datavisool-project-format",
+  "datavisool-codec",
+  "datavisool-archive",
+  "datavisool-fs",
+  "datavisool-asset",
+  "datavisool-db",
+  "datavisool-datasource",
+]

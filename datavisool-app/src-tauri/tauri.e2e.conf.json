@@ -1,0 +1,23 @@
+{
+  "identifier": "com.datavisool.desktop.e2e",
+  "build": {
+    "beforeBuildCommand": "pnpm run sidecar:verify && pnpm run prepare:workspace && pnpm exec tsc && pnpm exec vite build --config vite.build.config.ts --outDir .desktop-e2e/dist",
+    "frontendDist": "../.desktop-e2e/dist"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "security": {
+      "capabilities": [
+        "designer",
+        "preview",
+        "release",
+        {
+          "identifier": "desktop-e2e",
+          "description": "WebdriverIO access for the isolated desktop test build.",
+          "windows": ["main"],
+          "permissions": ["wdio:default", "wdio-webdriver:default", "core:window:allow-set-focus"]
+        }
+      ]
+    }
+  }
+}

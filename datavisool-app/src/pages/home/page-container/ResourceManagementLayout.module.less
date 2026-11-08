@@ -1,0 +1,240 @@
+/*
+ * Copyright © 2023–2026 xiaopujun. All rights reserved.
+ * Licensed under the DataVisool License. See the LICENSE file distributed with this software.
+ */
+
+// ResourceManagementLayout.module.less
+@background: #1E1E2F;
+@layout-container: #2C2C3E;
+
+@primary: #4FB8FF;
+@success: #3CED92;
+@warning: #FF6E6E;
+@secondary-text: #A0A0B2;
+@primary-text: #FFFFFF;
+
+.resourceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.resourceCard {
+  background: @layout-container;
+  border: 1px solid #3A3A4E;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    border-color: @primary;
+    box-shadow: 0 4px 12px rgba(79, 184, 255, 0.2);
+  }
+}
+
+.cardContent {
+  .itemName {
+    font-size: 16px;
+    font-weight: 600;
+    color: @primary-text;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .itemPreview {
+    font-size: 14px;
+    color: @secondary-text;
+    padding: 12px;
+    background: darken(@layout-container, 3%);
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid #3A3A4E;
+  }
+}
+
+.checkboxContainer {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.itemCheckbox {
+  width: 16px;
+  height: 16px;
+  accent-color: @primary;
+  cursor: pointer;
+}
+
+.paginationContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.pagination {
+  :global(.datavisool-pagination-item) {
+    background: @layout-container;
+    border: 1px solid #3A3A4E;
+    border-radius: 4px;
+    margin: 0 4px;
+    min-width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: @secondary-text;
+    font-size: 14px;
+    line-height: 20px;
+
+    &:hover {
+      border-color: @primary;
+      color: @primary;
+    }
+  }
+
+  :global(.datavisool-pagination-item-active) {
+    background: @primary;
+    border-color: @primary;
+    color: @primary-text;
+    font-weight: 500;
+  }
+
+  :global(.datavisool-pagination-item:disabled) {
+    background: @layout-container;
+    border-color: #3A3A4E;
+    color: #666676;
+    cursor: not-allowed;
+  }
+
+  :global(.datavisool-pagination-total) {
+    color: @secondary-text;
+  }
+}
+
+.searchInput {
+  width: 350px;
+
+  :global(.datavisool-field-content) {
+    width: 100%;
+  }
+
+  :global(.datavisool-input-shell) {
+    background: @layout-container;
+    border-color: #3A3A4E;
+    color: @primary-text;
+
+    &:hover, &:focus {
+      border-color: @primary;
+    }
+  }
+
+  :global(.datavisool-input-native::placeholder) {
+    color: @secondary-text;
+  }
+
+  :global(.datavisool-input-prefix) {
+    margin-right: 8px;
+  }
+}
+
+.uploadButton, .deleteButton {
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.uploadButton {
+  background: @primary;
+  border-color: @primary;
+
+  &:hover {
+    background: lighten(@primary, 10%);
+    border-color: lighten(@primary, 10%);
+  }
+}
+
+.deleteButton {
+  background: @warning;
+  border-color: @warning;
+
+  &:hover {
+    background: lighten(@warning, 10%);
+    border-color: lighten(@warning, 10%);
+  }
+}
+
+.uploadModal {
+  background: @layout-container;
+  border-radius: 8px;
+
+  :global(.datavisool-dialog-header) {
+    background: transparent;
+    border-bottom: 1px solid #3A3A4E;
+
+    :global(.datavisool-dialog-title) {
+      color: @primary-text;
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+
+  :global(.datavisool-dialog-body) {
+    padding: 20px;
+  }
+}
+
+.uploadModalFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #3A3A4E;
+
+  button {
+    border-radius: 4px;
+    font-weight: 500;
+  }
+}
+
+.modalUploadButton {
+  background: @primary;
+  border-color: @primary;
+
+  &:hover {
+    background: lighten(@primary, 10%);
+    border-color: lighten(@primary, 10%);
+  }
+}
+
+.modalCancelButton {
+  background: transparent;
+  border-color: #3A3A4E;
+  color: @secondary-text;
+
+  &:hover {
+    border-color: @primary;
+    color: @primary;
+  }
+}
+
+.uploadDragger {
+  background: @background;
+  border: 1px dashed #3A3A4E;
+  border-radius: 4px;
+
+  :global(.datavisool-upload-drag-container) {
+    padding: 20px;
+  }
+}
+
+.uploadText {
+  color: @secondary-text;
+  margin-top: 8px;
+  margin-bottom: 0;
+}

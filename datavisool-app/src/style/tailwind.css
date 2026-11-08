@@ -1,0 +1,52 @@
+/*
+ * Copyright © 2023–2026 xiaopujun. All rights reserved.
+ * Licensed under the DataVisool License. See the LICENSE file distributed with this software.
+ */
+:root,
+.dark {
+  --radius: 0.625rem;
+  --background: var(--datavisool-app-color-bg-app);
+  --foreground: var(--datavisool-app-color-text-primary);
+  --card: var(--datavisool-app-color-bg-card);
+  --card-foreground: var(--datavisool-app-color-text-primary);
+  --popover: var(--datavisool-app-color-bg-elevated);
+  --popover-foreground: var(--datavisool-app-color-text-primary);
+  --primary: var(--datavisool-app-color-primary);
+  --primary-foreground: #ffffff;
+  --secondary: var(--datavisool-app-color-bg-muted);
+  --secondary-foreground: var(--datavisool-app-color-text-primary);
+  --muted: var(--datavisool-app-color-bg-muted);
+  --muted-foreground: var(--datavisool-app-color-text-secondary);
+  --accent: var(--datavisool-app-color-accent);
+  --accent-foreground: #ffffff;
+  --destructive: var(--datavisool-app-color-danger);
+  --destructive-foreground: #ffffff;
+  --border: var(--datavisool-app-color-border);
+  --input: var(--datavisool-app-color-border-strong);
+  --ring: var(--datavisool-app-color-ring);
+  --chart-1: var(--datavisool-app-color-info);
+  --chart-2: var(--datavisool-app-color-success);
+  --chart-3: var(--datavisool-app-color-accent);
+  --chart-4: var(--datavisool-app-color-primary);
+  --chart-5: var(--datavisool-app-color-warning);
+  --sidebar: var(--datavisool-app-color-bg-panel);
+  --sidebar-foreground: var(--datavisool-app-color-text-primary);
+  --sidebar-primary: var(--datavisool-app-color-primary);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: rgba(59, 130, 255, 0.18);
+  --sidebar-accent-foreground: var(--datavisool-app-color-text-primary);
+  --sidebar-border: var(--datavisool-app-color-border);
+  --sidebar-ring: var(--datavisool-app-color-ring);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+    outline-color: color-mix(in srgb, var(--ring) 50%, transparent);
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "DataVisool",
+  "version": "../package.json",
+  "identifier": "com.datavisool.desktop",
+  "build": {
+    "beforeDevCommand": "pnpm run sidecar:verify && pnpm dev:tauri",
+    "beforeBuildCommand": "pnpm run sidecar:verify && pnpm --dir .. run build:app",
+    "devUrl": "http://localhost:5173",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "security": {
+      "csp": "default-src 'self' asset: data: blob:; script-src 'self' asset: https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' asset: 'unsafe-inline'; img-src 'self' asset: data: blob: https: http:; media-src 'self' asset: data: blob: https: http:; font-src 'self' asset: data: https:; connect-src 'self' ipc://localhost http://ipc.localhost http: https:; frame-src 'self' https: http:; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "devCsp": "default-src 'self' asset: data: blob:; script-src 'self' asset: https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' asset: 'unsafe-inline'; img-src 'self' asset: data: blob: https: http:; media-src 'self' asset: data: blob: https: http:; font-src 'self' asset: data: https:; connect-src 'self' ipc://localhost http://ipc.localhost http: https: ws://localhost:5173; frame-src 'self' https: http:; worker-src 'self' blob:; object-src 'none'; base-uri 'self'",
+      "assetProtocol": {
+        "enable": true,
+        "scope": [
+          "$APPDATA/static/**",
+          "$APPDATA/ai-driven/**",
+          "$RESOURCE/**"
+        ]
+      }
+    },
+    "windows": [
+      {
+        "create": false,
+        "title": "DataVisool",
+        "width": 1280,
+        "height": 800,
+        "resizable": true,
+        "decorations": false,
+        "transparent": true
+      }
+    ]
+  },
+  "bundle": {
+    "active": true,
+    "externalBin": [
+      "binaries/rg"
+    ],
+    "resources": [
+      "resources/ai/component-optimization/",
+      "resources/licenses/ripgrep/",
+      "resources/licenses/codemirror/",
+      "resources/licenses/lobe-icons/"
+    ],
+    "icon": [
+      "icons/icon.ico",
+      "icons/icon.icns",
+      "icons/icon.png"
+    ]
+  }
+}

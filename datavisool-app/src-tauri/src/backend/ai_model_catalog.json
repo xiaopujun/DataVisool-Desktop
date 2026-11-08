@@ -1,0 +1,457 @@
+{
+  "providers": [
+    {
+      "provider": "openai",
+      "providerLabel": "OpenAI",
+      "providerFamily": "openai-compatible",
+      "models": [
+        {
+          "modelName": "gpt-4o-mini",
+          "label": "gpt-4o-mini（推荐）",
+          "defaultMaxTokens": 4096,
+          "supportsImageInput": true,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": false,
+          "isDefault": true
+        },
+        {
+          "modelName": "gpt-4.1-mini",
+          "label": "gpt-4.1-mini",
+          "defaultMaxTokens": 4096,
+          "supportsImageInput": true,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": false,
+          "isDefault": false
+        },
+        {
+          "modelName": "gpt-4o",
+          "label": "gpt-4o",
+          "defaultMaxTokens": 8192,
+          "supportsImageInput": true,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": false,
+          "isDefault": false
+        },
+        {
+          "modelName": "gpt-4.1",
+          "label": "gpt-4.1",
+          "defaultMaxTokens": 8192,
+          "supportsImageInput": true,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": false,
+          "isDefault": false
+        },
+        {
+          "modelName": "o3-mini",
+          "label": "o3-mini",
+          "defaultMaxTokens": 8192,
+          "supportsImageInput": true,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": true,
+          "isDefault": false
+        },
+        {
+          "modelName": "o4-mini",
+          "label": "o4-mini",
+          "defaultMaxTokens": 8192,
+          "supportsImageInput": true,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": true,
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "provider": "qwen",
+      "providerLabel": "千问 Qwen",
+      "providerFamily": "openai-compatible",
+      "models": [
+        {
+          "modelName": "qwen3.7-plus",
+          "label": "qwen3.7-plus（推荐）",
+          "defaultMaxTokens": 64000,
+          "supportsImageInput": true,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": true,
+          "isDefault": true
+        },
+        {
+          "modelName": "qwen3.8-max",
+          "label": "qwen3.8-max（旗舰）",
+          "defaultMaxTokens": 128000,
+          "supportsImageInput": true,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": true,
+          "isDefault": false
+        },
+        {
+          "modelName": "qwen3.7-flash",
+          "label": "qwen3.7-flash（低成本）",
+          "defaultMaxTokens": 64000,
+          "supportsImageInput": true,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": true,
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "provider": "kimi",
+      "providerLabel": "Kimi",
+      "providerFamily": "openai-compatible",
+      "models": [
+        {
+          "modelName": "kimi-k3",
+          "label": "kimi-k3（推荐）",
+          "defaultMaxTokens": 131072,
+          "supportsImageInput": true,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": true,
+          "isDefault": true
+        },
+        {
+          "modelName": "kimi-k2.7-code",
+          "label": "kimi-k2.7-code（编程）",
+          "defaultMaxTokens": null,
+          "supportsImageInput": true,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": true,
+          "isDefault": false
+        },
+        {
+          "modelName": "kimi-k2.7-code-highspeed",
+          "label": "kimi-k2.7-code-highspeed（高速编程）",
+          "defaultMaxTokens": null,
+          "supportsImageInput": true,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": true,
+          "isDefault": false
+        },
+        {
+          "modelName": "kimi-k2.6",
+          "label": "kimi-k2.6（通用）",
+          "defaultMaxTokens": null,
+          "supportsImageInput": true,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": true,
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "provider": "glm",
+      "providerLabel": "智谱 GLM",
+      "providerFamily": "openai-compatible",
+      "models": [
+        {
+          "modelName": "glm-5.2",
+          "label": "glm-5.2（推荐）",
+          "defaultMaxTokens": 65536,
+          "supportsImageInput": false,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": true,
+          "isDefault": true
+        },
+        {
+          "modelName": "glm-5v-turbo",
+          "label": "glm-5v-turbo（视觉编程）",
+          "defaultMaxTokens": 65536,
+          "supportsImageInput": true,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": true,
+          "isDefault": false
+        },
+        {
+          "modelName": "glm-5",
+          "label": "glm-5（Agent）",
+          "defaultMaxTokens": 65536,
+          "supportsImageInput": false,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": true,
+          "isDefault": false
+        },
+        {
+          "modelName": "glm-4.7",
+          "label": "glm-4.7（通用）",
+          "defaultMaxTokens": 65536,
+          "supportsImageInput": false,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": true,
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "provider": "minimax",
+      "providerLabel": "MiniMax",
+      "providerFamily": "openai-compatible",
+      "models": [
+        {
+          "modelName": "MiniMax-M3",
+          "label": "MiniMax-M3（推荐）",
+          "defaultMaxTokens": null,
+          "supportsImageInput": true,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": true,
+          "isDefault": true
+        },
+        {
+          "modelName": "MiniMax-M2.7",
+          "label": "MiniMax-M2.7",
+          "defaultMaxTokens": null,
+          "supportsImageInput": false,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": true,
+          "isDefault": false
+        },
+        {
+          "modelName": "MiniMax-M2.7-highspeed",
+          "label": "MiniMax-M2.7-highspeed",
+          "defaultMaxTokens": null,
+          "supportsImageInput": false,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": true,
+          "isDefault": false
+        },
+        {
+          "modelName": "MiniMax-M2.5",
+          "label": "MiniMax-M2.5",
+          "defaultMaxTokens": null,
+          "supportsImageInput": false,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": true,
+          "isDefault": false
+        },
+        {
+          "modelName": "MiniMax-M2.5-highspeed",
+          "label": "MiniMax-M2.5-highspeed",
+          "defaultMaxTokens": null,
+          "supportsImageInput": false,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": true,
+          "isDefault": false
+        },
+        {
+          "modelName": "MiniMax-M2.1",
+          "label": "MiniMax-M2.1",
+          "defaultMaxTokens": null,
+          "supportsImageInput": false,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": true,
+          "isDefault": false
+        },
+        {
+          "modelName": "MiniMax-M2.1-highspeed",
+          "label": "MiniMax-M2.1-highspeed",
+          "defaultMaxTokens": null,
+          "supportsImageInput": false,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": true,
+          "isDefault": false
+        },
+        {
+          "modelName": "MiniMax-M2",
+          "label": "MiniMax-M2",
+          "defaultMaxTokens": null,
+          "supportsImageInput": false,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": true,
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "provider": "doubao",
+      "providerLabel": "豆包（火山方舟）",
+      "providerFamily": "openai-compatible",
+      "models": [
+        {
+          "modelName": "doubao-seed-2-0-lite-260215",
+          "label": "Doubao Seed 2.0 Lite（推荐）",
+          "defaultMaxTokens": null,
+          "supportsImageInput": true,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": true,
+          "isDefault": true
+        },
+        {
+          "modelName": "doubao-seed-2-0-pro-260215",
+          "label": "Doubao Seed 2.0 Pro",
+          "defaultMaxTokens": null,
+          "supportsImageInput": true,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": true,
+          "isDefault": false
+        },
+        {
+          "modelName": "doubao-seed-2-0-code-preview-260215",
+          "label": "Doubao Seed 2.0 Code",
+          "defaultMaxTokens": null,
+          "supportsImageInput": false,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": true,
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "provider": "hunyuan",
+      "providerLabel": "腾讯混元",
+      "providerFamily": "openai-compatible",
+      "models": [
+        {
+          "modelName": "hunyuan-turbos-latest",
+          "label": "hunyuan-turbos-latest（推荐）",
+          "defaultMaxTokens": null,
+          "supportsImageInput": false,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": false,
+          "isDefault": true
+        },
+        {
+          "modelName": "hunyuan-vision",
+          "label": "hunyuan-vision（图片理解）",
+          "defaultMaxTokens": null,
+          "supportsImageInput": true,
+          "supportsToolCalling": false,
+          "supportsReasoningContent": false,
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "provider": "gemini",
+      "providerLabel": "Google Gemini",
+      "providerFamily": "gemini",
+      "models": [
+        {
+          "modelName": "gemini-3.6-flash",
+          "label": "Gemini 3.6 Flash（推荐）",
+          "defaultMaxTokens": 65536,
+          "supportsImageInput": true,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": true,
+          "isDefault": true
+        },
+        {
+          "modelName": "gemini-3.5-flash-lite",
+          "label": "Gemini 3.5 Flash-Lite（高速）",
+          "defaultMaxTokens": 65536,
+          "supportsImageInput": true,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": true,
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "provider": "grok",
+      "providerLabel": "xAI Grok",
+      "providerFamily": "xai-responses",
+      "models": [
+        {
+          "modelName": "grok-4.6",
+          "label": "Grok 4.6（推荐）",
+          "defaultMaxTokens": null,
+          "supportsImageInput": true,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": true,
+          "isDefault": true
+        }
+      ]
+    },
+    {
+      "provider": "deepseek",
+      "providerLabel": "DeepSeek",
+      "providerFamily": "openai-compatible",
+      "models": [
+        {
+          "modelName": "deepseek-chat",
+          "label": "deepseek-chat（推荐）",
+          "defaultMaxTokens": 4096,
+          "supportsImageInput": false,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": false,
+          "isDefault": true
+        },
+        {
+          "modelName": "deepseek-reasoner",
+          "label": "deepseek-reasoner",
+          "defaultMaxTokens": 4096,
+          "supportsImageInput": false,
+          "supportsToolCalling": false,
+          "supportsReasoningContent": true,
+          "isDefault": false
+        },
+        {
+          "modelName": "deepseek-vl2",
+          "label": "deepseek-vl2",
+          "defaultMaxTokens": 4096,
+          "supportsImageInput": true,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": false,
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "provider": "mimo",
+      "providerLabel": "小米 MiMo",
+      "providerFamily": "openai-compatible",
+      "models": [
+        {
+          "modelName": "mimo-v2.5",
+          "label": "mimo-v2.5（推荐）",
+          "defaultMaxTokens": 4096,
+          "supportsImageInput": true,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": true,
+          "isDefault": true
+        },
+        {
+          "modelName": "mimo-v2.5-pro",
+          "label": "mimo-v2.5-pro（Agent/长任务）",
+          "defaultMaxTokens": 8192,
+          "supportsImageInput": false,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": true,
+          "isDefault": false
+        }
+      ]
+    },
+    {
+      "provider": "anthropic",
+      "providerLabel": "Anthropic",
+      "providerFamily": "anthropic",
+      "models": [
+        {
+          "modelName": "claude-sonnet-4-20250514",
+          "label": "claude-sonnet-4-20250514（推荐）",
+          "defaultMaxTokens": 4096,
+          "supportsImageInput": true,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": true,
+          "isDefault": true
+        },
+        {
+          "modelName": "claude-opus-4-20250514",
+          "label": "claude-opus-4-20250514",
+          "defaultMaxTokens": 4096,
+          "supportsImageInput": true,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": true,
+          "isDefault": false
+        },
+        {
+          "modelName": "claude-3-7-sonnet-20250219",
+          "label": "claude-3-7-sonnet-20250219",
+          "defaultMaxTokens": 4096,
+          "supportsImageInput": true,
+          "supportsToolCalling": true,
+          "supportsReasoningContent": true,
+          "isDefault": false
+        }
+      ]
+    }
+  ]
+}

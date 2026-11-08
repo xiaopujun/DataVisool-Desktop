@@ -1,0 +1,6 @@
+packages:
+  - 'datavisool-app'
+  - 'datavisool-ui'
+  - 'datavisool-sdk'
+  - 'datavisool-interaction-engine'
+  - 'datavisool-cli'

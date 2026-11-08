@@ -1,0 +1,128 @@
+/*
+ * Copyright © 2023–2026 xiaopujun. All rights reserved.
+ * Licensed under the DataVisool License. See the LICENSE file distributed with this software.
+ */
+/* App-owned global defaults. Load AppTheme.less after these values. */
+:root,
+.dark {
+  --datavisool-app-font-family: "Inter", "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  --datavisool-app-color-bg-canvas: #0a1020;
+  --datavisool-app-color-bg-sidebar: #0b1222;
+  --datavisool-app-color-bg-surface-1: #111a2e;
+  --datavisool-app-color-bg-surface-2: #162238;
+  --datavisool-app-color-bg-hover: #1a2740;
+  --datavisool-app-color-bg-active: #1d3155;
+  --datavisool-app-color-border-subtle: rgba(255, 255, 255, 0.06);
+  --datavisool-app-color-border-default: rgba(255, 255, 255, 0.08);
+  --datavisool-app-color-border-strong: rgba(255, 255, 255, 0.12);
+  --datavisool-app-color-border-focus: rgba(59, 130, 246, 0.45);
+  --datavisool-app-color-text-primary: #f3f7ff;
+  --datavisool-app-color-text-secondary: #aab7d1;
+  --datavisool-app-color-text-tertiary: #7c8aa5;
+  --datavisool-app-color-text-disabled: #5e6a82;
+  --datavisool-app-color-primary: #3b82f6;
+  --datavisool-app-color-primary-hover: #4a90ff;
+  --datavisool-app-color-teal: #22c7b8;
+  --datavisool-app-color-purple: #8b5cf6;
+  --datavisool-app-color-orange: #f5b544;
+  --datavisool-app-color-success: #22c55e;
+  --datavisool-app-color-warning: #f59e0b;
+  --datavisool-app-color-danger: #ef4444;
+  --datavisool-app-color-info: #38bdf8;
+
+  /* Legacy aliases remain stable for existing component and consumer styles. */
+  /* TODO(legacy-compat): 迁移现有样式调用方后，移除旧主题变量别名。 */
+  --datavisool-app-color-bg-app: var(--datavisool-app-color-bg-canvas);
+  --datavisool-app-color-bg-card: var(--datavisool-app-color-bg-surface-1);
+  --datavisool-app-color-bg-elevated: var(--datavisool-app-color-bg-surface-2);
+  --datavisool-app-color-bg-muted: var(--datavisool-app-color-bg-surface-2);
+  --datavisool-app-color-accent: var(--datavisool-app-color-purple);
+  --datavisool-app-color-border: var(--datavisool-app-color-border-subtle);
+  --datavisool-app-color-ring: var(--datavisool-app-color-border-focus);
+  --datavisool-app-control-height: 40px;
+  --datavisool-app-control-radius: 10px;
+  --datavisool-app-control-padding-x: 16px;
+  --datavisool-app-control-bg: rgba(255, 255, 255, 0.03);
+  --datavisool-app-control-border: var(--datavisool-app-color-border-default);
+  --datavisool-app-control-border-hover: var(--datavisool-app-color-border-strong);
+  --datavisool-app-control-shadow: none;
+  --datavisool-app-control-focus-shadow: 0 0 0 3px rgba(59, 130, 246, 0.14);
+  --datavisool-app-panel-radius: 16px;
+  --datavisool-app-panel-bg: var(--datavisool-app-color-bg-surface-1);
+  --datavisool-app-panel-border: var(--datavisool-app-color-border-default);
+  --datavisool-app-panel-shadow: 0 8px 24px rgba(0, 0, 0, 0.24);
+  --datavisool-app-overlay-shadow: 0 12px 32px rgba(0, 0, 0, 0.32);
+  --datavisool-app-primary-gradient: linear-gradient(135deg, #4c8dff 0%, #3b82f6 100%);
+
+  --bg-canvas: var(--datavisool-app-color-bg-canvas);
+  --bg-sidebar: var(--datavisool-app-color-bg-sidebar);
+  --bg-surface-1: var(--datavisool-app-color-bg-surface-1);
+  --bg-surface-2: var(--datavisool-app-color-bg-surface-2);
+  --bg-hover: var(--datavisool-app-color-bg-hover);
+  --bg-active: var(--datavisool-app-color-bg-active);
+  --border-subtle: var(--datavisool-app-color-border-subtle);
+  --border-default: var(--datavisool-app-color-border-default);
+  --border-strong: var(--datavisool-app-color-border-strong);
+  --border-focus: var(--datavisool-app-color-border-focus);
+  --text-primary: var(--datavisool-app-color-text-primary);
+  --text-secondary: var(--datavisool-app-color-text-secondary);
+  --text-tertiary: var(--datavisool-app-color-text-tertiary);
+  --text-disabled: var(--datavisool-app-color-text-disabled);
+  --primary-hover: var(--datavisool-app-color-primary-hover);
+  --teal: var(--datavisool-app-color-teal);
+  --purple: var(--datavisool-app-color-purple);
+  --orange: var(--datavisool-app-color-orange);
+  --success: var(--datavisool-app-color-success);
+  --warning: var(--datavisool-app-color-warning);
+  --danger: var(--datavisool-app-color-danger);
+  --info: var(--datavisool-app-color-info);
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --shadow-card: var(--datavisool-app-panel-shadow);
+  --shadow-float: var(--datavisool-app-overlay-shadow);
+  --shadow-focus: var(--datavisool-app-control-focus-shadow);
+
+  --radius: var(--radius-md);
+  --background: var(--datavisool-app-color-bg-app);
+  --foreground: var(--datavisool-app-color-text-primary);
+  --card: var(--datavisool-app-color-bg-card);
+  --card-foreground: var(--datavisool-app-color-text-primary);
+  --popover: var(--datavisool-app-color-bg-elevated);
+  --popover-foreground: var(--datavisool-app-color-text-primary);
+  --primary: var(--datavisool-app-color-primary);
+  --primary-foreground: #ffffff;
+  --secondary: var(--datavisool-app-color-bg-muted);
+  --secondary-foreground: var(--datavisool-app-color-text-primary);
+  --muted: var(--datavisool-app-color-bg-muted);
+  --muted-foreground: var(--datavisool-app-color-text-secondary);
+  --accent: var(--datavisool-app-color-purple);
+  --accent-foreground: #ffffff;
+  --destructive: var(--datavisool-app-color-danger);
+  --destructive-foreground: #ffffff;
+  --border: var(--datavisool-app-color-border);
+  --input: var(--datavisool-app-color-border-strong);
+  --ring: var(--datavisool-app-color-ring);
+  --chart-1: var(--datavisool-app-color-primary);
+  --chart-2: var(--datavisool-app-color-teal);
+  --chart-3: var(--datavisool-app-color-purple);
+  --chart-4: var(--datavisool-app-color-orange);
+  --chart-5: var(--datavisool-app-color-danger);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+    outline-color: color-mix(in srgb, var(--ring) 50%, transparent);
+  }
+}

@@ -1,0 +1,38 @@
+/*
+ * Copyright © 2023–2026 xiaopujun. All rights reserved.
+ * Licensed under the DataVisool License. See the LICENSE file distributed with this software.
+ */
+.datavisool-app-designer-main-editor {
+  .datavisool-app-active-artboard-frame {
+    position: absolute;
+    box-sizing: border-box;
+    border: 2px solid #3b82f6;
+    pointer-events: none;
+  }
+
+  .datavisool-app-artboard-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .datavisool-app-artboard-label {
+    position: absolute;
+    display: inline-flex;
+    gap: 10px;
+    max-width: 300px;
+    padding: 2px 5px;
+    color: var(--text-secondary, #aab7d1);
+    background: rgba(10, 16, 32, 0.82);
+    border: 0;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 18px;
+    user-select: none;
+
+    span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    small { flex: none; color: var(--text-tertiary, #7c8aa5); font-size: 12px; }
+  }
+}

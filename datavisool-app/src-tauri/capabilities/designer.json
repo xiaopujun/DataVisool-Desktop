@@ -1,0 +1,23 @@
+{
+  "identifier": "designer",
+  "description": "主设计器窗口的最小桌面能力；仅该窗口可创建预览或发布窗口。",
+  "windows": [
+    "main"
+  ],
+  "permissions": [
+    "core:default",
+    "core:window:allow-create",
+    "core:window:allow-minimize",
+    "core:window:allow-maximize",
+    "core:window:allow-close",
+    "core:window:allow-is-fullscreen",
+    "core:window:allow-is-maximized",
+    "core:window:allow-set-fullscreen",
+    "core:window:allow-start-dragging",
+    "core:window:allow-toggle-maximize",
+    "core:webview:allow-create-webview-window",
+    "dialog:allow-message",
+    "dialog:allow-save",
+    "dialog:allow-open"
+  ]
+}

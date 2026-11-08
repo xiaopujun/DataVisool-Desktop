@@ -1,0 +1,115 @@
+/*
+ * Copyright © 2023–2026 xiaopujun. All rights reserved.
+ * Licensed under the DataVisool License. See the LICENSE file distributed with this software.
+ */
+@import "@/style/AppTheme.less";
+
+.custom-title-bar {
+  height: 45px;
+  background: #050916;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  border-bottom: 1px solid rgba(52, 65, 101, 0.42);
+  position: relative;
+  z-index: 9999;
+  width: 100%;
+  flex-shrink: 0;
+
+  .title-bar-left {
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    pointer-events: none;
+
+    .window-logo {
+      width: 28px;
+      height: 28px;
+      margin-right: 8px;
+    }
+
+    .window-title {
+      color: #ffffff;
+      font-size: 14px;
+      font-family: var(--datavisool-app-font-family);
+    }
+  }
+
+  .title-bar-right {
+    display: flex;
+    height: 100%;
+
+    .title-bar-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 46px;
+      height: 100%;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      -webkit-app-region: no-drag;
+      app-region: no-drag;
+      z-index: 10000;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.08);
+
+        .i-icon {
+            fill: #ffffff;
+        }
+      }
+
+      &.close-button:hover {
+        background-color: #E81123;
+
+        .i-icon {
+            fill: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+.custom-title-bar.mac-title-bar {
+  justify-content: center;
+
+  .title-bar-left {
+    padding-left: 0;
+  }
+
+  .mac-traffic-lights {
+    position: absolute;
+    left: 14px;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 10000;
+    -webkit-app-region: no-drag;
+    app-region: no-drag;
+  }
+
+  .mac-traffic-light {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    padding: 0;
+    cursor: pointer;
+    background: #666;
+  }
+
+  .mac-traffic-light.close {
+    background: #ff5f57;
+  }
+
+  .mac-traffic-light.minimize {
+    background: #febc2e;
+  }
+
+  .mac-traffic-light.zoom {
+    background: #28c840;
+  }
+}

@@ -1,0 +1,32 @@
+/*
+ * Copyright © 2023–2026 xiaopujun. All rights reserved.
+ * Licensed under the DataVisool License. See the LICENSE file distributed with this software.
+ */
+.datavisool-app-designer-main-editor {
+  .designer-ds-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #0a1020;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, var(--datavisool-app-workspace-grid-opacity, 0.08)) 1px, transparent 1.3px);
+    background-size: var(--datavisool-app-workspace-grid-size, 24px) var(--datavisool-app-workspace-grid-size, 24px);
+    background-position: var(--datavisool-app-workspace-grid-x, 0px) var(--datavisool-app-workspace-grid-y, 0px);
+    touch-action: none;
+  }
+
+  .designer-ds-container.datavisool-app-workspace-hand,
+  .designer-ds-container.datavisool-app-workspace-panning,
+  .designer-ds-container:has(.datavisool-app-workspace-hand) {
+    cursor: grab;
+  }
+
+  .designer-ds-container.datavisool-app-workspace-panning { cursor: grabbing; }
+
+  .designer-ds-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: 0 0;
+  }
+}

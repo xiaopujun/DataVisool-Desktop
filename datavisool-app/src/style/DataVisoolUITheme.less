@@ -1,0 +1,90 @@
+/*
+ * Copyright © 2023–2026 xiaopujun. All rights reserved.
+ * Licensed under the DataVisool License. See the LICENSE file distributed with this software.
+ */
+/* Bridge App-owned legacy theme tokens to the isolated datavisool-ui namespace.
+ * Keep this mapping on each theme owner so local tokens resolve in that scope
+ * instead of being computed once at :root and inherited by portals/children.
+ * TODO(legacy-compat): 迁移现有主题变量后，移除仅为旧变量保留的映射。
+ */
+.datavisool-ui-app-theme-tokens() {
+  --datavisool-ui-accent: var(--accent, #8b5cf6);
+  --datavisool-ui-background: var(--background, #0a1020);
+  --datavisool-ui-bg-active: var(--bg-active, #1d3155);
+  --datavisool-ui-bg-canvas: var(--bg-canvas, #0a1020);
+  --datavisool-ui-bg-hover: var(--bg-hover, #1a2740);
+  --datavisool-ui-bg-sidebar: var(--bg-sidebar, #0b1222);
+  --datavisool-ui-bg-surface-1: var(--bg-surface-1, #111a2e);
+  --datavisool-ui-bg-surface-2: var(--bg-surface-2, #162238);
+  --datavisool-ui-border-default: var(--border-default, rgba(255, 255, 255, 0.08));
+  --datavisool-ui-border-focus: var(--border-focus, rgba(59, 130, 246, 0.45));
+  --datavisool-ui-border-strong: var(--border-strong, rgba(255, 255, 255, 0.12));
+  --datavisool-ui-border-subtle: var(--border-subtle, rgba(255, 255, 255, 0.06));
+  --datavisool-ui-color-border: var(--datavisool-app-color-border, rgba(255, 255, 255, 0.06));
+  --datavisool-ui-color-info: var(--datavisool-app-color-info, #38bdf8);
+  --datavisool-ui-color-primary: var(--datavisool-app-color-primary, #3b82f6);
+  --datavisool-ui-color-success: var(--datavisool-app-color-success, #22c55e);
+  --datavisool-ui-color-text-primary: var(--datavisool-app-color-text-primary, #f3f7ff);
+  --datavisool-ui-color-text-secondary: var(--datavisool-app-color-text-secondary, #aab7d1);
+  --datavisool-ui-color-warning: var(--datavisool-app-color-warning, #f59e0b);
+  --datavisool-ui-control-bg: var(--datavisool-app-control-bg, rgba(255, 255, 255, 0.03));
+  --datavisool-ui-control-border: var(--datavisool-app-control-border, rgba(255, 255, 255, 0.08));
+  --datavisool-ui-control-border-hover: var(--datavisool-app-control-border-hover, rgba(255, 255, 255, 0.12));
+  --datavisool-ui-control-focus-shadow: var(--datavisool-app-control-focus-shadow, 0 0 0 3px rgba(59, 130, 246, 0.14));
+  --datavisool-ui-control-height: var(--datavisool-app-control-height, 40px);
+  --datavisool-ui-control-radius: var(--datavisool-app-control-radius, 10px);
+  --datavisool-ui-control-shadow: var(--datavisool-app-control-shadow, none);
+  --datavisool-ui-danger: var(--danger, #ef4444);
+  --datavisool-ui-destructive: var(--destructive, #ef4444);
+  --datavisool-ui-destructive-foreground: var(--destructive-foreground, #ffffff);
+  --datavisool-ui-foreground: var(--foreground, #f3f7ff);
+  --datavisool-ui-font-family: var(--datavisool-app-font-family, "Inter", "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif);
+  --datavisool-ui-panel-bg: var(--datavisool-app-panel-bg, #111a2e);
+  --datavisool-ui-muted-foreground: var(--muted-foreground, #aab7d1);
+  --datavisool-ui-overlay-shadow: var(--datavisool-app-overlay-shadow, 0 12px 32px rgba(0, 0, 0, 0.32));
+  --datavisool-ui-panel-border: var(--datavisool-app-panel-border, rgba(255, 255, 255, 0.08));
+  --datavisool-ui-panel-shadow: var(--datavisool-app-panel-shadow, 0 8px 24px rgba(0, 0, 0, 0.24));
+  --datavisool-ui-popover: var(--popover, #162238);
+  --datavisool-ui-popover-foreground: var(--popover-foreground, #f3f7ff);
+  --datavisool-ui-primary: var(--primary, #3b82f6);
+  --datavisool-ui-primary-foreground: var(--primary-foreground, #ffffff);
+  --datavisool-ui-primary-gradient: var(--datavisool-app-primary-gradient, linear-gradient(135deg, #4c8dff 0%, #3b82f6 100%));
+  --datavisool-ui-primary-hover: var(--primary-hover, #4a90ff);
+  --datavisool-ui-radius-lg: var(--radius-lg, 12px);
+  --datavisool-ui-radius-md: var(--radius-md, 10px);
+  --datavisool-ui-radius-sm: var(--radius-sm, 8px);
+  --datavisool-ui-radius-xl: var(--radius-xl, 16px);
+  --datavisool-ui-ring: var(--ring, rgba(59, 130, 246, 0.45));
+  --datavisool-ui-secondary: var(--secondary, #162238);
+  --datavisool-ui-secondary-foreground: var(--secondary-foreground, #f3f7ff);
+  --datavisool-ui-shadow-card: var(--shadow-card, 0 8px 24px rgba(0, 0, 0, 0.24));
+  --datavisool-ui-shadow-float: var(--shadow-float, 0 12px 32px rgba(0, 0, 0, 0.32));
+  --datavisool-ui-shadow-focus: var(--shadow-focus, 0 0 0 3px rgba(59, 130, 246, 0.14));
+  --datavisool-ui-space-1: var(--space-1, 4px);
+  --datavisool-ui-space-2: var(--space-2, 8px);
+  --datavisool-ui-space-3: var(--space-3, 12px);
+  --datavisool-ui-space-4: var(--space-4, 16px);
+  --datavisool-ui-space-6: var(--space-6, 24px);
+  --datavisool-ui-success: var(--success, #22c55e);
+  --datavisool-ui-text-primary: var(--text-primary, #f3f7ff);
+  --datavisool-ui-text-secondary: var(--text-secondary, #aab7d1);
+  --datavisool-ui-text-tertiary: var(--text-tertiary, #7c8aa5);
+  --datavisool-ui-warning: var(--warning, #f59e0b);
+}
+
+:root,
+.dark,
+.datavisool-app-designer,
+.blueprint-workspace-root,
+.bp-workspace-popup,
+.datavisool-app-config-code-dialog,
+.datavisool-app-theme-config,
+.datavisool-app-theme-editor-modal,
+.datavisool-app-theme-config-global-dialog,
+.datavisool-app-header-canvas-config,
+.cover-config-modal,
+.hotkey-modal,
+.restore-local-storage-modal,
+.datavisool-code-editor-hints {
+  .datavisool-ui-app-theme-tokens();
+}
